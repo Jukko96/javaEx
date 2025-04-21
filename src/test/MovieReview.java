@@ -1,7 +1,7 @@
 package test;
 
 public class MovieReview {
-    String title;
-    String review;
+    public String title;
+    public String review;
 
 }
