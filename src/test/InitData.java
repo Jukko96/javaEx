@@ -1,8 +1,8 @@
 package test;
 
 public class InitData {
-    int initInt;
-    String initString;
-    MovieReview initObject;
+    public int initInt;
+    public String initString;
+    public MovieReview initObject;
     boolean initBoolean;
 }

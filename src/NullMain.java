@@ -2,8 +2,11 @@ import test.InitData;
 
 public class NullMain {
     public static void main(String[] args) {
-        InitData data = null;
-        null.value = 10; //nullPoinerException 발생
-        System.out.println("data = "+data.value);
+        InitData data = new InitData();
+
+        System.out.println("data.initInt = "+data.initInt);
+        System.out.println("data.initString = "+data.initString);
+        System.out.println("data.initObject = "+data.initObject);
+        System.out.println("data.initObject.title = "+data.initObject.title);//여기서 nullPointerException 발생
     }
 }
