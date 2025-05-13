@@ -7,7 +7,7 @@ public class CastingMain4 {
         child1.childMethod();//문제 없음
 
         Parent parent2 = new Parent();
-        Child child2 = (Child) new Parent();//런타임 오류
+        Child child2 = (Child) new Parent();//런타임 오류 ClassCastException
         child2.childMethod();//실행 불가
 
     }
