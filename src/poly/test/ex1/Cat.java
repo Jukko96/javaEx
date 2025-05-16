@@ -1,4 +1,4 @@
-package poly.basic.test;
+package poly.test.ex1;
 
 public class Cat {
 
