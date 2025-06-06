@@ -7,6 +7,13 @@ public class ObjectPolyEx1 {
 
     }
     private static void action(Object object){
-
+//        object.sound();
+//        object.move();
+        if(object instanceof Dog dog){
+            dog.sound();
+        }
+        if(object instanceof Car car){
+            car.move();
+        }
     }
 }
