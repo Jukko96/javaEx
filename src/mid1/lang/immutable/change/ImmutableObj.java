@@ -10,6 +10,14 @@ public class ImmutableObj {
         int result = value + addValue;
         return new ImmutableObj(result);
     }
+
+    @Override
+    public String toString() {
+        return "ImmutableObj{" +
+                "value=" + value +
+                '}';
+    }
+
     public int getValue() {
         return value;
     }
