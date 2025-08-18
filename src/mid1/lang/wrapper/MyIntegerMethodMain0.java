@@ -21,4 +21,6 @@ public class MyIntegerMethodMain0 {
             return 0;
         }
     }
+
+
 }
