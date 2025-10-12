@@ -1,4 +1,4 @@
-package mid1.enumeration.ex2;
+package mid1.enumeration.ex3;
 
 public class ClassGrade {
     public static final ClassGrade BASIC = new ClassGrade();
