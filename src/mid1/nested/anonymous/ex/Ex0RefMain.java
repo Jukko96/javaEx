@@ -1,4 +1,4 @@
-package mid1.nested.anonymous.Ex0;
+package mid1.nested.anonymous.ex;
 
 public class Ex0RefMain {
 
