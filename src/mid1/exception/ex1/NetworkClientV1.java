@@ -14,6 +14,10 @@ public class NetworkClientV1 {
             System.out.println(address + "서버 연결 실패");
             return "connectError";
         }
+        if(sendError){
+            System.out.println(address + "서버 연결 실패");
+            return "sendError";
+        }
         System.out.println(address + "서버 연결 성공");
         return "success";
     }
