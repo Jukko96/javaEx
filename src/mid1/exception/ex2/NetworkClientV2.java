@@ -20,6 +20,7 @@ public class NetworkClientV2 {
         if(sendError){
             throw new NetworkClientExceptionV2("sendError", address + "서버 연결 실패: "+data);
         }
+        System.out.println(address + "서버에 데이터 전송 : " + data);
     }
     public void disconnect(){
         System.out.println(address + " 서버 연결 해제");

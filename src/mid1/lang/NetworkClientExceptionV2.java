@@ -6,7 +6,7 @@ public class NetworkClientExceptionV2 extends Exception {
 
     public NetworkClientExceptionV2(String errorCode, String message) {
         super(message);
-        errorCode = errorCode;
+        this.errorCode = errorCode;
     }
 
     public String getErrorCode(){
