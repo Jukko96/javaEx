@@ -8,6 +8,7 @@ public class NetworkClientV3 {
     private final String address;
     public boolean connectError;
     public boolean sendError;
+    public boolean runtimeError;
 
     public NetworkClientV3(String address) {
         this.address = address;
@@ -21,8 +22,9 @@ public class NetworkClientV3 {
     public void send (String data) throws SendExceptionV3 {
         if(sendError){
             throw new SendExceptionV3(data, address + "서버 연결 실패: "+data);
-            //중간에 다른 에러가 났다고 가정
-//            throw new RuntimeException("ex");
+        }
+        if(runtimeError){
+            throw new RuntimeException("ex");
         }
         System.out.println(address + "서버에 데이터 전송 : " + data);
     }
@@ -36,7 +38,8 @@ public class NetworkClientV3 {
         if(data.contains("error2")){
             sendError = true;
         }
-
-
+        if(data.contains("error3")){
+            runtimeError = true;
+        }
     }
 }
