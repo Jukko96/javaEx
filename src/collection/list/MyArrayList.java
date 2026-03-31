@@ -42,7 +42,7 @@ public class MyArrayList<E> implements MyList<E>{
 
     //코드 추가, 요소의 마자믹부터 index 까지 오른쪽으로 밀기
     private void shiftRightFrom(int index) {
-        for (int i = size; i < index; i--) {
+        for (int i = size; i > index; i--) {
             elementData[i] = elementData[i-1];
         }
     }
