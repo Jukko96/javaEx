@@ -2,7 +2,6 @@ package collection.test.ex3;
 
 import java.util.HashSet;
 import java.util.Set;
-import collection.test.ex3.Rectangle;
 
 public class RectangleTest {
     public static void main(String[] args) {
