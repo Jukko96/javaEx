@@ -11,5 +11,10 @@ public class MyArrayMain {
             Integer next = iterator.next();
             System.out.println("next = " + next);
         }
+        
+        //추가
+        for (Integer value : myArray) {
+            System.out.println("value = " + value);
+        }
     }
 }
