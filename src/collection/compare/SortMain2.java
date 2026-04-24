@@ -1,4 +1,4 @@
-package collection.iterable;
+package collection.compare;
 
 import java.util.Arrays;
 import java.util.Comparator;
