@@ -5,35 +5,41 @@ import java.util.List;
 public class CardGameMain {
     public static void main(String[] args) {
         CardDeck cardDeck = new CardDeck();
-        List<Card> player1 = cardDeck.deal();
-        List<Card> player2 = cardDeck.deal();
+        Player player1 = new Player("플레이어1");
+        Player player2 = new Player("플레이어2");
+
+        player1.deal(cardDeck);
+        player2.deal(cardDeck);
+
 
         startGame(player1, player2);
 
     }
 
-    private static void startGame(List<Card> player1, List<Card> player2) {
-        Integer player1Score = 0;
-        Integer player2Score = 0;
+    private static void startGame(Player player1, Player player2) {
+        player1.showHand();
+        player2.showHand();
 
-        for (Card card : player1) {
-            player1Score += card.getNumber();
+        Player winner = getWinner(player1, player2);
+
+        if(winner == null){
+            System.out.println("무승부");
+        }else{
+            System.out.println(winner.getName() + " 승리");
         }
-        for (Card card : player2) {
-            player2Score += card.getNumber();
-        }
-        System.out.println("플레이어 1의 카드 : " + player1 + ", 합계 : " + player1Score );
-        System.out.println("플레이어 2의 카드 : " + player2 + ", 합계 : " + player2Score);
+    }
+
+    private static Player getWinner(Player player1, Player player2) {
+        Integer player1Score = player1.sumRank();
+        Integer player2Score = player2.sumRank();
 
         if(player1Score > player2Score){
-            System.out.println("플레이어 1의 승리");
+            return player1;
         }
         if(player1Score < player2Score){
-            System.out.println("플레이어 2의 승리");
+            return player2;
         }
-        if(player1Score == player2Score){
-            System.out.println("무승부");
-        }
+        return null;
     }
 
 

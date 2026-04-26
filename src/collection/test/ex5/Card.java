@@ -2,9 +2,9 @@ package collection.test.ex5;
 
 import java.util.Objects;
 
-public class Card {
-    private Suit suit;
-    private Integer number;
+public class Card implements Comparable<Card>{
+    private final Suit suit;
+    private final Integer number;
 
     public Card(Suit suit, Integer number) {
         this.suit = suit;
@@ -34,5 +34,17 @@ public class Card {
     @Override
     public String toString() {
         return number + "(" + suit.getIcon() + ")";
+    }
+
+    @Override
+    public int compareTo(Card anotherCard) {
+        Integer card1Number = this.getNumber();
+        Integer card2Number = anotherCard.getNumber();
+        if(card1Number == card2Number){
+            return this.suit.compareTo(anotherCard.suit);
+        }
+        return Integer.compare(card1Number,card2Number);
+
+
     }
 }
