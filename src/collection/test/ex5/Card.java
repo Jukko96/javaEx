@@ -3,10 +3,10 @@ package collection.test.ex5;
 import java.util.Objects;
 
 public class Card {
-    private CardSuit suit;
+    private Suit suit;
     private Integer number;
 
-    public Card(CardSuit suit, Integer number) {
+    public Card(Suit suit, Integer number) {
         this.suit = suit;
         this.number = number;
     }
@@ -23,4 +23,16 @@ public class Card {
         return Objects.hash(suit, number);
     }
 
+    public Suit getSuit() {
+        return suit;
+    }
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    @Override
+    public String toString() {
+        return number + "(" + suit.getCardSuit() + ")";
+    }
 }
