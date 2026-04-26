@@ -1,17 +1,17 @@
 package collection.test.ex5;
 
 public enum Suit {
-    SPADE(CardSuit.SPADE,1),
-    DIAMOND(CardSuit.DIAMOND,2),
-    HEART(CardSuit.HEART,3),
-    CLOBBER(CardSuit.CLOBBER,4);
+    SPADE("\u2660",1),
+    DIAMOND("\u2666",2),
+    HEART("\u2665",3),
+    CLOBBER("\u2663",4);
 
-    private final CardSuit cardSuit;
+    private final String icon;
     private final Integer rank;
 
 
-    Suit(CardSuit cardSuit, Integer rank) {
-        this.cardSuit = cardSuit;
+    Suit(String icon, Integer rank) {
+        this.icon = icon;
         this.rank = rank;
     }
 
@@ -19,7 +19,7 @@ public enum Suit {
         return rank;
     }
 
-    public CardSuit getCardSuit() {
-        return cardSuit;
+    public String getIcon() {
+        return icon;
     }
 }

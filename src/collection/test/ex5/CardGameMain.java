@@ -22,8 +22,8 @@ public class CardGameMain {
         for (Card card : player2) {
             player2Score += card.getNumber();
         }
-        System.out.println("플레이어 1의 카드 : " + player1);
-        System.out.println("플레이어 2의 카드 : " + player2);
+        System.out.println("플레이어 1의 카드 : " + player1 + ", 합계 : " + player1Score );
+        System.out.println("플레이어 2의 카드 : " + player2 + ", 합계 : " + player2Score);
 
         if(player1Score > player2Score){
             System.out.println("플레이어 1의 승리");
