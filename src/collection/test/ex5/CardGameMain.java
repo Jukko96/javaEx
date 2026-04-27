@@ -1,15 +1,15 @@
 package collection.test.ex5;
 
-import java.util.List;
 
 public class CardGameMain {
     public static void main(String[] args) {
         CardDeck cardDeck = new CardDeck();
+        Dealer dealer = new Dealer(cardDeck);
         Player player1 = new Player("플레이어1");
         Player player2 = new Player("플레이어2");
 
-        player1.deal(cardDeck);
-        player2.deal(cardDeck);
+        dealer.deal(player1);
+        dealer.deal(player2);
 
 
         startGame(player1, player2);
