@@ -40,7 +40,7 @@ public class Card implements Comparable<Card>{
     public int compareTo(Card anotherCard) {
         Integer card1Number = this.getNumber();
         Integer card2Number = anotherCard.getNumber();
-        if(card1Number == card2Number){
+        if(card1Number.equals(card2Number)){
             return this.suit.compareTo(anotherCard.suit);
         }
         return Integer.compare(card1Number,card2Number);

@@ -36,4 +36,10 @@ public class CardDeck  {
         return Deck.size();
     }
 
+    @Override
+    public String toString() {
+        return "CardDeck{" +
+                "Deck=" + Deck +
+                '}';
+    }
 }

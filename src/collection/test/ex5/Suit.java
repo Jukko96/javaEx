@@ -1,10 +1,10 @@
 package collection.test.ex5;
 
 public enum Suit {
-    SPADE("\u2660"),
-    DIAMOND("\u2666"),
+    CLOBBER("\u2663"),
     HEART("\u2665"),
-    CLOBBER("\u2663");
+    DIAMOND("\u2666"),
+    SPADE("\u2660");
 
     private final String icon;
 

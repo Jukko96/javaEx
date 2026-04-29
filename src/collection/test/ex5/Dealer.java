@@ -22,12 +22,18 @@ public class Dealer {
         List<Card> part = new ArrayList(cards.subList(0, DRAWSIZE));
         cards.subList(0,DRAWSIZE).clear();
         Collections.sort(part);
-        player.showHand();
+        player.setHand(part);
+//        player.showHand();
     }
 
-    private void resetDeck() {
+    public void resetDeck() {
         this.deck = new CardDeck();
     }
 
-
+    @Override
+    public String toString() {
+        return "Dealer{" +
+                "deck=" + deck +
+                '}';
+    }
 }
