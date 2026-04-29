@@ -23,9 +23,6 @@ public class Card implements Comparable<Card>{
         return Objects.hash(suit, number);
     }
 
-    public Suit getSuit() {
-        return suit;
-    }
 
     public Integer getNumber() {
         return number;

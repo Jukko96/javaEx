@@ -19,7 +19,7 @@ public class CardGameMain {
 
         room.checkInPlayer(player3);
         room.checkInPlayer(player4);
-//        room.checkOutPlayer(player1);
+        room.checkOutPlayer(player1);
 
         room.startGame();
 

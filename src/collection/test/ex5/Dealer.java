@@ -23,7 +23,6 @@ public class Dealer {
         cards.subList(0,DRAWSIZE).clear();
         Collections.sort(part);
         player.setHand(part);
-//        player.showHand();
     }
 
     public void resetDeck() {

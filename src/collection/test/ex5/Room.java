@@ -1,8 +1,6 @@
 package collection.test.ex5;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class Room {
@@ -28,25 +26,29 @@ public class Room {
         if(players.size() < 2){
             System.out.println("2명 이상 참여 시 시작 가능합니다.");
         }else{
-//            System.out.println(dealer);
-            for (Player player : players) {
-                dealer.deal(player);
-//                System.out.println(player);
-            }
-//            System.out.println(players);
-
-            for (Player player : players) {
-                player.showHand();
-            }
-
+            initGame();
 
             Player winner = getWinner();
             System.out.println(winner.getName() + "의 승");
+            
+            resetRoom();
+        }
+    }
 
-            dealer.resetDeck();
-            for (Player player : players) {
-                player.removeHand();
-            }
+    private void initGame() {
+        for (Player player : players) {
+            dealer.deal(player);
+        }
+
+        for (Player player : players) {
+            player.showHand();
+        }
+    }
+
+    private void resetRoom(){
+        dealer.resetDeck();
+        for (Player player : players) {
+            player.removeHand();
         }
     }
 
